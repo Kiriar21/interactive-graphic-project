@@ -1,7 +1,11 @@
-*{
-    margin: 0px auto;
-    padding: 0px 0px;
+* {
+    margin: 0;
+    padding: 0 !important;
     width: 100vw;
+}
+body {
+    background-color: #000 !important;
+    color: #fff !important;
 }
 li{
     list-style: none;
@@ -16,9 +20,8 @@ header, nav, footer {
     justify-content: center;
     text-align: center;
 }
-nav > a {
-    text-decoration: none;
-    font-size: 40px;
+a {
+    text-decoration: none !important;
 }
 footer{
     font-size: large;
@@ -38,3 +41,41 @@ main{
     padding-top: 5vh;
     font-size: 30px;
 }
+.content {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 10vh;
+
+}
+footer {
+    margin-top: 10vh;
+}
+
+h3{
+    margin-bottom: 10vh !important;
+}
+
+nav {
+    background-color: #111;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+}
+
+nav ul li a {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 72px;
+}
+@media screen and (max-width: 768px) {
+    .content {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }   
+}
+
