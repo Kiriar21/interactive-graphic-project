@@ -13,13 +13,13 @@
 body {
     background-color: #000 !important;
     color: #fff !important;
-    text-align: center !important;
+    text-align: left !important;
     width: auto !important;
 }
-li{
+li {
     list-style: none;
 }
-h1{
+h1 {
     font-size: 50px;
     text-transform: uppercase;
 }
@@ -35,11 +35,11 @@ header a img {
 a {
     text-decoration: none !important;
 }
-footer{
+footer {
     margin-top: 10vh;
 }
 
-main{ 
+main { 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ main{
     flex-direction: column;
     padding-top: 10vh;
 }
-.content, .p-con{
+.content, .p-con {
     word-wrap: break-word;
     padding-top: 5vh;
 }
