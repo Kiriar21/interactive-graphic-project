@@ -1,18 +1,26 @@
+/* colors {
+    bg: #000000;
+    text: #ffffff;
+    navbar: #002500;
+    btn: #D1E7DD;
+    btn-hover: #A3CFBB;
+} */
 * {
     margin: 0;
-    padding: 0 !important;
-    width: 100vw;
+    padding: 0 !important; 
+
 }
 body {
     background-color: #000 !important;
     color: #fff !important;
     text-align: justify !important;
+    width: auto !important;
 }
 li{
     list-style: none;
 }
 h1{
-    font-size: 3.125em !important;
+    font-size: 50px;
     text-transform: uppercase;
 }
 header, nav, footer {
@@ -21,12 +29,16 @@ header, nav, footer {
     justify-content: center;
     text-align: center;
 }
+header a img {
+    max-width: 100vw;
+}
 a {
     text-decoration: none !important;
 }
 footer{
-    font-size: large;
+    margin-top: 10vh;
 }
+
 main{ 
     display: flex;
     align-items: center;
@@ -36,62 +48,41 @@ main{
     padding-top: 10vh;
 }
 .content, .p-con{
-    width: 60vw;
     word-wrap: break-word;
     padding-top: 5vh;
-    font-size: 1.875em;
 }
 .content {
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 10vh;
-
-}
-footer {
     margin-top: 10vh;
 }
-
-h3{
-    margin-bottom: 10vh !important;
+.box-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
 }
-
-nav {
-    background-color: #111;
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
-}
-
-nav ul li a {
-    color: white !important;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 header {
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
-@media screen and (max-width: 768px) {
-    .content {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }   
-}
 nav {
+    background-color: #111;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
     background-color: #002500 !important;
 }
-
-/* colors {
-    bg: #000000;
-    text: #ffffff;
-    navbar: #002500;
-    btn: #D1E7DD;
-    btn-hover: #A3CFBB;
-} */
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li a {
+    color: white !important;
+    font-weight: bold !important;
+    text-decoration: none;
+}
 @media screen and (max-width: 991px) {
     nav ul li{
         margin: 20px 0px;
-        
         display: flex;
         justify-content: center;
     }
@@ -101,11 +92,5 @@ nav {
     }
     nav {
         position: relative !important;
-    }
-}
-.subtitle {
-    font-size: 1.5em;
-}
-.smallsubtitle {
-    font-size: 1.25em;
+    } 
 }
