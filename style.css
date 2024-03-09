@@ -12,7 +12,7 @@ li{
     list-style: none;
 }
 h1{
-    font-size: 50px;
+    font-size: 3.125em !important;
     text-transform: uppercase;
 }
 header, nav, footer {
@@ -39,7 +39,7 @@ main{
     width: 60vw;
     word-wrap: break-word;
     padding-top: 5vh;
-    font-size: 30px;
+    font-size: 1.875em;
 }
 .content {
     margin-left: 20vw;
@@ -70,7 +70,6 @@ nav ul li a {
 header {
     margin-top: 5vh;
     margin-bottom: 5vh;
-    font-size: 72px;
 }
 @media screen and (max-width: 768px) {
     .content {
@@ -105,8 +104,8 @@ nav {
     }
 }
 .subtitle {
-    font-size: 24px;
+    font-size: 1.5em;
 }
 .smallsubtitle {
-    font-size: 20px;
+    font-size: 1.25em;
 }
