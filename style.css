@@ -89,3 +89,19 @@ nav {
     btn: #D1E7DD;
     btn-hover: #A3CFBB;
 } */
+@media screen and (max-width: 991px) {
+    nav ul li{
+        margin: 20px 0px;
+        
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a {
+        border-bottom: 1px solid #fff !important;
+        width: 50vw;
+    }
+    nav {
+        position: relative !important;
+    }
+
+}
