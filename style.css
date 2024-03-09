@@ -6,7 +6,7 @@
 body {
     background-color: #000 !important;
     color: #fff !important;
-    text-align: justify;
+    text-align: justify !important;
 }
 li{
     list-style: none;
