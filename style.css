@@ -78,4 +78,6 @@ header {
         margin-right: 5vw;
     }   
 }
-
+nav {
+    background-color: #002500 !important;
+}
