@@ -34,7 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/paper@0.12.15/dist/paper-full.min.js"></script>
     <style>
         #arkanoidCanvas {
-          border: 4px solid #0095DD; /* Niebieska ramka */
+          border: 4px solid #0095DD; 
           margin: 20px auto;
           display: block;
           background: #FFF;
@@ -75,16 +75,16 @@
     <main class="my-5">
         <canvas id="arkanoidCanvas" width="650" height="800"></canvas>
 
-        <!-- Dodane wyświetlanie wyniku -->
+        
         <div id="scoreDisplay" style="text-align: center; font-size: 24px; margin-top: 20px;"></div>
 
         <script>
-        // Załaduj paper.js i podłącz go do canvas
+        
         window.onload = function() {
             paper.install(window);
             paper.setup(document.getElementById('arkanoidCanvas'));
 
-            // Definicje
+            
             let score = 0;
             let gameOverDisplayed = false;
             const brickRowCount = 5;
@@ -97,7 +97,7 @@
             };
             let bricks = createBricks();
 
-            // Tworzenie paletki
+            
             let paddle = new Path.Rectangle({
                 point: [view.size.width / 2 - 75 / 2, view.size.height - 10],
                 size: [75, 10],
@@ -105,7 +105,7 @@
             });
             let paddleSpeed = 7;
 
-            // Tworzenie piłki
+            
             let ball = new Path.Circle({
                 center: [view.size.width / 2, view.size.height / 2],
                 radius: 10,
@@ -114,7 +114,7 @@
             });
             let ballSpeed = new Point(2, -2);
 
-            // Funkcje
+            
             function createBricks() {
                 let bricks = [];
                 for(let c = 0; c < brickColumnCount; c++) {
@@ -133,9 +133,9 @@
                 return bricks;
             }
 
-            // Logika gry
+            
             function onFrame(event) {
-                // Ruch piłki
+                
                 ball.position.x += ballSpeed.x;
                 ball.position.y += ballSpeed.y;
                 if(ball.bounds.left < 0 || ball.bounds.right > view.size.width) {
@@ -155,7 +155,7 @@
                     }
                 }
 
-                // Ruch paletki
+                
                 if(Key.isDown('right') && paddle.bounds.right < view.size.width) {
                     paddle.position.x += paddleSpeed;
                 }
@@ -163,7 +163,7 @@
                     paddle.position.x -= paddleSpeed;
                 }
 
-                // Wykrywanie kolizji z cegłami
+                
                 for(let c = 0; c < brickColumnCount; c++) {
                     for(let r = 0; r < brickRowCount; r++) {
                         let b = bricks[c][r];
@@ -172,7 +172,7 @@
                             b.remove();
                             bricks[c][r] = null;
                             score++;
-                            // Aktualizacja wyniku na stronie
+                            
                             document.getElementById('scoreDisplay').innerText = "Score: " + score;
                             if(score == brickRowCount * brickColumnCount) {
                                 alert("YOU WIN, CONGRATULATIONS!");
@@ -184,7 +184,7 @@
             }
 
             function resetGame() {
-                // Zresetuj stan gry do początkowego
+                
                 ball.position = [view.size.width / 2, view.size.height - 30];
                 ballSpeed = new Point(2, -2);
                 paddle.position = [view.size.width / 2 - paddle.bounds.width / 2, view.size.height - paddle.bounds.height];
@@ -200,7 +200,7 @@
                 bricks = createBricks();
             }
 
-            // Event listenery
+            
             function onKeyDown(event) {
                 if(event.key === 'right') {
                     paddle.position.x += paddleSpeed;
@@ -210,7 +210,7 @@
             }
 
             function onKeyUp(event) {
-                // Opcjonalnie, jeśli chcesz zatrzymać paletkę po zwolnieniu klawisza
+                
             }
 
             view.onFrame = onFrame;
